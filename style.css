@@ -1,0 +1,62 @@
+html {
+  min-width: 360px;
+  width: 100VW;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.circulo {
+  width: 30%;
+  min-width: 300px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: white;
+  animation: rodar infinite 10s 10s linear;
+
+}
+
+.circulo img {
+  width: 130%;
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  scale: 1;
+  animation: balancar 600ms linear infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes balancar {
+  0% {
+    translate: 0 50px;
+    opacity: 1;
+    scale: 0.98;
+  }
+
+  50% {
+    translate: 0 -25px;
+    scale: 1.05;
+    opacity: 0.8;
+  }
+
+  100% {
+    translate: 0 50px;
+    opacity: 1;
+    scale: 0.98;
+  }
+}
+
+@keyframes rodar {
+  to {
+    rotate: -1turn;
+    
+  }
+}
